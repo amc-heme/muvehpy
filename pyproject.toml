@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "muvehpy"
 version = "0.0.1"
-description = "muveh convenience functoions in python"
+description = "muveh convenience functions in python"
 readme = "README.md"
 requires-python = ">=3.7"
 license = {file = "LICENSE"}
