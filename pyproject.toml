@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "muvehpy"
+version = "0.0.1"
+description = "muveh convenience functoions in python"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+
+dependencies = [
+  "scipy",
+  "scanpy",
+  "pandas",
+  "numpy",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/amcheme/muvehpy"
+"Bug Tracker" = "https://github.com/amcheme/muvehpy/issues"
