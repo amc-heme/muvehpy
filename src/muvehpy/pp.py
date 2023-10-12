@@ -82,7 +82,16 @@ def read_muveh_mat_config(config):
 
   return muveh_cols, muveh_rows, muveh_ad, muveh_dp, muveh_oth
 
-def add_muveh(h5ad, config = None, ad_matrix = None, dp_matrix = None, oth_matrix = None, colnames = None, rownames = None, lut = None, cell_prefix = '', cell_suffix = ''):
+def add_muveh(h5ad, \
+             config = None, \
+             ad_matrix = None, \
+             dp_matrix = None, \
+             oth_matrix = None, \
+             colnames = None, \
+             rownames = None, \
+             lut = None, \
+             cell_prefix = '', \
+             cell_suffix = ''):
   
   # read matrices
   if config is None:

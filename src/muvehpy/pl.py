@@ -25,7 +25,8 @@ def muveh_plot(adata, variants = [], plot_type = 'genotype', incl_oth = False, g
                           index = adata.obs_names, columns = col_names).astype(str)], axis = 1), obsm = adata.obsm), 
                color = col_names, palette = {'0' : 'gray', '1' : 'yellow', '2' : 'red', '3' : 'purple'}, **kwargs)
   elif plot_type == 'depth':
-    sc.pl.umap(sc.AnnData(obs = pd.concat([adata.obs, pd.DataFrame.sparse.from_spmatrix(muveh_depth(adata, incl_oth = incl_oth)[:,variant_indices], \
+    sc.pl.umap(sc.AnnData(obs = pd.concat([adata.obs, pd.DataFrame.sparse.from_spmatrix(muveh_depth(adata, \
+                                                                                        incl_oth = incl_oth)[:,variant_indices], \
                           index = adata.obs_names, columns = col_names)], axis = 1), obsm = adata.obsm), \
                color = col_names, **kwargs)
   else:
