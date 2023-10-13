@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 def muveh_plot(adata, variants = [], plot_type = 'genotype', incl_oth = False, genomic_names = False, **kwargs):
-  from muvehpy.pp import muveh_score_mut, muveh_score, muveh_depth
+  from ..pp import muveh_score_mut, muveh_score, muveh_depth
   variants_sel = adata.uns['muveh_lut'][adata.uns['muveh_lut'].isin(variants).any(axis=1)].drop('variant_name', axis = 1).drop_duplicates()
 
   variants_sel = variants_sel[variants_sel['variant'].isin(adata.uns['muveh_variants'].index)]
